@@ -11,19 +11,16 @@ import androidx.browser.customtabs.CustomTabColorSchemeParams;
 import androidx.browser.customtabs.CustomTabsIntent;
 
 public class MainActivity extends Activity {
-    private static final String HOME = "https://open.spotify.com/";
+    private static final String HOME = "https://playlist.market/curator";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        // Spotify's web player requires a supported full browser for protected audio.
-        // Android WebView does not expose the same reliable DRM/browser environment.
-        openSpotifyInBrowser();
+        openCuratorPortal();
     }
 
-    private void openSpotifyInBrowser() {
-        Uri spotify = Uri.parse(HOME);
+    private void openCuratorPortal() {
+        Uri portal = Uri.parse(HOME);
         try {
             CustomTabColorSchemeParams colors = new CustomTabColorSchemeParams.Builder()
                     .setToolbarColor(Color.rgb(25, 20, 20))
@@ -37,16 +34,15 @@ public class MainActivity extends Activity {
                     .setShareState(CustomTabsIntent.SHARE_STATE_ON)
                     .build();
 
-            tabs.launchUrl(this, spotify);
+            tabs.launchUrl(this, portal);
             finish();
         } catch (Exception customTabError) {
             try {
-                Intent browser = new Intent(Intent.ACTION_VIEW, spotify);
-                startActivity(browser);
+                startActivity(new Intent(Intent.ACTION_VIEW, portal));
                 finish();
             } catch (Exception browserError) {
                 Toast.makeText(this,
-                        "Please install or update Chrome, Firefox, or another Spotify-supported browser, then try again.",
+                        "Please install or update a supported browser, then try again.",
                         Toast.LENGTH_LONG).show();
                 finish();
             }
