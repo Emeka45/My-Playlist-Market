@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">MUS — My Universal Spotify</title>
+  <desc id="desc">A custom emerald MUS monogram inside a dark rounded music badge.</desc>
+  <defs>
+    <linearGradient id="green" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#39F58A"/><stop offset="1" stop-color="#13A84A"/>
+    </linearGradient>
+    <linearGradient id="rim" x1="0" y1="0" x2="0.9" y2="1">
+      <stop offset="0" stop-color="#303038"/><stop offset="1" stop-color="#101014"/>
+    </linearGradient>
+  </defs>
+  <rect x="18" y="18" width="476" height="476" rx="122" fill="url(#rim)"/>
+  <rect x="32" y="32" width="448" height="448" rx="108" fill="#19191F" stroke="#35353C" stroke-width="3"/>
+  <circle cx="256" cy="256" r="172" fill="none" stroke="#1DB954" stroke-opacity=".18" stroke-width="3"/>
+  <circle cx="256" cy="256" r="151" fill="none" stroke="#1DB954" stroke-opacity=".34" stroke-width="2"/>
+  <path d="M99 329V183h35l47 74 47-74h35v146h-37v-88l-45 68-45-68v88z" fill="url(#green)"/>
+  <path d="M282 183h37v91c0 17 9 27 25 27s25-10 25-27v-91h37v94c0 37-25 58-62 58s-62-21-62-58z" fill="#F6FFF9"/>
+  <path d="M421 207c-12-12-28-18-49-18-28 0-48 15-48 38 0 24 19 33 45 39l14 3c12 3 17 6 17 12 0 7-8 12-22 12-17 0-32-6-45-17l-21 25c16 16 39 24 66 24 37 0 60-17 60-44 0-23-16-34-45-41l-16-4c-11-3-16-5-16-11 0-6 7-10 18-10 14 0 27 4 38 13z" fill="url(#green)" transform="translate(-2 0) scale(.92 1) translate(25 0)"/>
+  <text x="256" y="418" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" letter-spacing="6" text-anchor="middle" fill="#D9FBE5">MY UNIVERSAL SPOTIFY</text>
+</svg>
